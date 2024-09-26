@@ -8,7 +8,16 @@ family = "UbuntuMono Nerd Font"
 
 [window]
 decorations = "none"
+#startup_mode = "Maximized"
+opacity = 0.99
+resize_increments = true
+dimensions = { columns = 162, lines = 57 }
+position = { x = 50, y = 1500 }
 
 [window.padding]
 x = 7
 y = 0
+
+[shell]
+program = "/bin/bash"  # или "/bin/zsh", если используете zsh
+args = ["--login", "-c", "tmux new-session -A -s default"]  # Эта команда создаст новую сессию tmux или присоединится к существующей

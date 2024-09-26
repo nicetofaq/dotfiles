@@ -9,6 +9,7 @@ export MISTVALLEY="$REPOS/github.com/mistvalley"
 export YUMA="$MISTVALLEY/scale_yuma"
 export CDPATH=.:$HOME/icloud:$CDPATH
 export DOCKER_HOST="$HOME/.colima/docker.sock"
+export OVN="$REPOS/github.com/ovn"
 
 # Check if .fzf.bash exists before sourcing it
 if [ -f ~/.fzf.bash ]; then
@@ -20,8 +21,6 @@ alias v='nvim'
 alias vi='nvim'
 
 # Improved ls alias with options
-alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
-alias ll='eza --color=always --long --git --icons=always -a'
 alias cat='bat'
 alias man='tldr'
 
@@ -32,9 +31,16 @@ alias repos='cd "$REPOS"'
 alias mist='cd "$MISTVALLEY"'
 alias dot='cd "$DOTFILES"'
 alias icloud='cd "$ICLOUD"'
+alias lab='cd $REPOS/github.com/nicetofaq/k8s'
+alias ovn='cd $OVN'
+
+# k8s
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias h='helm'
 
 # Aliases for specific commands or paths
-alias yumar='/Users/Shared/GameMakerStudio2/Cache/runtimes/runtime-2024.2.0.163/bin/igor/osx/arm64/Igor -j=8 -options="$MISTVALLEY/build.bff" -- Mac Run --quiet'
+alias yumar='/Users/Shared/GameMakerStudio2/Cache/runtimes/runtime-2024.4.0.168/bin/igor/osx/arm64/Igor -j=8 -options="$MISTVALLEY/build.bff" -- Mac Run'
 alias yumagm='open "$HOME/Library/Application Support/Steam/steamapps/common/GameMaker Studio 2/GameMaker.app" --args "$YUMA/yuma/YumaE.yyp"'
 
 # Git related aliases
