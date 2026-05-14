@@ -19,6 +19,7 @@ fi
 # ALIASES
 alias v='nvim'
 alias vi='nvim'
+alias bashrc='vi $DOTFILES/.bashrc && source $DOTFILES/.bashrc'
 
 # Improved ls alias with options
 alias cat='bat'
@@ -33,15 +34,18 @@ alias dot='cd "$DOTFILES"'
 alias icloud='cd "$ICLOUD"'
 alias lab='cd $REPOS/github.com/nicetofaq/k8s'
 alias ovn='cd $OVN'
+alias ovni='cd $OVN/infra'
 
 # k8s
 alias k='kubectl'
+alias ka='k apply -f'
+alias kd='k delete -f'
 alias kgp='kubectl get pods'
 alias h='helm'
 
 # Aliases for specific commands or paths
 alias yumar='/Users/Shared/GameMakerStudio2/Cache/runtimes/runtime-2024.4.0.168/bin/igor/osx/arm64/Igor -j=8 -options="$MISTVALLEY/build.bff" -- Mac Run'
-alias yumagm='open "$HOME/Library/Application Support/Steam/steamapps/common/GameMaker Studio 2/GameMaker.app" --args "$YUMA/yuma/YumaE.yyp"'
+alias yumagm='open "$YUMA/yuma/YumaE.yyp"'
 
 # Git related aliases
 alias cbr='git branch --sort=-committerdate | grep -v "^\*" | fzf --header "Checkout Recent Branch" --preview "git log --decorate --oneline --graph --abbrev-commit -n 10 {1}" --preview-window=right:70% --pointer="" | xargs -I{} git checkout {}'
@@ -84,3 +88,5 @@ _fzf_comprun() {
 # Set preview options for fzf
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+export DOCKER_HOST=unix:///var/run/docker.sock
+. "$HOME/.cargo/env"

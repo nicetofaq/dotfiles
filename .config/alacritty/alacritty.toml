@@ -1,7 +1,7 @@
 import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 
 [font]
-size = 35
+size = 25
 
 [font.normal]
 family = "UbuntuMono Nerd Font"
@@ -11,8 +11,8 @@ decorations = "none"
 #startup_mode = "Maximized"
 opacity = 0.99
 resize_increments = true
-dimensions = { columns = 162, lines = 57 }
-position = { x = 50, y = 1500 }
+dimensions = { columns = 125, lines = 41 }
+position = { x = 25, y = 845 }
 
 [window.padding]
 x = 7
